@@ -44,9 +44,6 @@ struct TownView: View {
                 engine.onAppBecameActive()
             }
         }
-        .onAppear {
-            adService.preloadAll()
-        }
         .sheet(isPresented: $showInput) {
             UsageInputView(engine: engine)
         }

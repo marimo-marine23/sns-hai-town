@@ -5,6 +5,11 @@ options:
     iOS: "16.0"
   xcodeVersion: "15.0"
 
+packages:
+  GoogleMobileAds:
+    url: https://github.com/googleads/swift-package-manager-google-mobile-ads
+    from: "11.0.0"
+
 targets:
   XMonitorApp:
     type: application
@@ -24,13 +29,15 @@ targets:
         INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown"
         INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "シェア画像を保存するために使用します"
         INFOPLIST_KEY_LSApplicationQueriesSchemes: "twitter,instagram,tiktok,youtube,fb,threads,line,reddit,snapchat,discord"
+        INFOPLIST_KEY_NSUserTrackingUsageDescription: "パーソナライズされた広告を表示するために使用します"
         SWIFT_VERSION: "5.9"
         GENERATE_INFOPLIST_FILE: YES
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: "1.0.0"
         CODE_SIGN_STYLE: Automatic
-    # dependencies:
-    #   - target: XUsageMonitor
+        INFOPLIST_FILE: XMonitorApp/Info.plist
+    dependencies:
+      - package: GoogleMobileAds
 
   # Screen Time Extension (Family Controls認可取得後に有効化)
   # XUsageMonitor:

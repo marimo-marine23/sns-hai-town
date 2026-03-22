@@ -30,6 +30,7 @@
 		ECCA29C3C78084215EF35A88 /* LocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 517F8F795261436F9B7CCF05 /* LocalStore.swift */; };
 		EE5333B4A517B09527142772 /* TownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B26FA97773E38ABB63AF43 /* TownView.swift */; };
 		F1E54B9DA4ED003605B29DDC /* DialogueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE72E0AD85840908493B556 /* DialogueService.swift */; };
+		F3CDA58CFB042BBC37BE88BC /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 44F3A9A728479C51EDD8EA99 /* GoogleMobileAds */; };
 		FA1DA31C45FB12EEC81BA3A6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5888CAA8F899EFF121FE2DC3 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		5DD25F17751E7E2B4CE3172E /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
 		6578C42FCC130DBECD62DEB9 /* dialogues.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dialogues.json; sourceTree = "<group>"; };
 		68E39CA99B406BEBCBB0D20A /* SharedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedConstants.swift; sourceTree = "<group>"; };
+		89ABB77BBFC608A354C7DC0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D137BDD9BDB2DD3E04F0C96 /* AdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdService.swift; sourceTree = "<group>"; };
 		9C3256ED18AADA87A391E046 /* ScreenTimeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTimeService.swift; sourceTree = "<group>"; };
 		A845EE9CFA9414EF373ACBA3 /* TownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TownState.swift; sourceTree = "<group>"; };
@@ -60,6 +62,17 @@
 		CAA19DF8359B3AC306BBD33D /* UsageRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageRecord.swift; sourceTree = "<group>"; };
 		E11C4D2659B282CDFB87E82D /* ShareCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C3C28D243AB7BAB893A21CC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3CDA58CFB042BBC37BE88BC /* GoogleMobileAds in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		21ED333B879943705822EF65 /* Settings */ = {
@@ -113,6 +126,7 @@
 		6927D6BF14BFBD6F7A888C44 /* XMonitorApp */ = {
 			isa = PBXGroup;
 			children = (
+				89ABB77BBFC608A354C7DC0E /* Info.plist */,
 				24C4CAE0AB6086467CEE42A4 /* App */,
 				FC202547AE2B0FC50A170F29 /* Core */,
 				F265D39DBB67F19ACA3ECECC /* Features */,
@@ -230,6 +244,7 @@
 			buildPhases = (
 				4962E6B59357241FE7EC69BB /* Sources */,
 				278251DCFEBACF661FF0D9E6 /* Resources */,
+				C3C28D243AB7BAB893A21CC5 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,6 +252,7 @@
 			);
 			name = XMonitorApp;
 			packageProductDependencies = (
+				44F3A9A728479C51EDD8EA99 /* GoogleMobileAds */,
 			);
 			productName = XMonitorApp;
 			productReference = 1D95AD22607CC301747BEC64 /* XMonitorApp.app */;
@@ -265,6 +281,9 @@
 			);
 			mainGroup = C91770B9C2106F4FD723D0C3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				F2AD5F7EB4450B8F394A7483 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 867F215A3383BE067E9D0B25 /* Products */;
 			projectDirPath = "";
@@ -328,8 +347,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XMonitorApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationQueriesSchemes = "twitter,instagram,tiktok,youtube,fb,threads,line,reddit,snapchat,discord";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "シェア画像を保存するために使用します";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "パーソナライズされた広告を表示するために使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -411,8 +432,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = XMonitorApp/Info.plist;
 				INFOPLIST_KEY_LSApplicationQueriesSchemes = "twitter,instagram,tiktok,youtube,fb,threads,line,reddit,snapchat,discord";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "シェア画像を保存するために使用します";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "パーソナライズされた広告を表示するために使用します";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -515,6 +538,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F2AD5F7EB4450B8F394A7483 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		44F3A9A728479C51EDD8EA99 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F2AD5F7EB4450B8F394A7483 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3A58509A93DFAA3FA5E0690 /* Project object */;
 }

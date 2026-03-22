@@ -1,0 +1,26 @@
+# Xcode
+build/
+DerivedData/
+*.xcworkspace
+!*.xcodeproj/project.xcworkspace/
+xcuserdata/
+*.xcuserstate
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Swift Package Manager
+.build/
+Packages/
+Package.resolved
+
+# macOS
+.DS_Store
+*.swp
+*~
+
+# Claude
+.claude/
+
+# Screenshots (dev only)
+screenshot_*.png

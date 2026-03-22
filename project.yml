@@ -1,0 +1,53 @@
+name: XMonitorApp
+options:
+  bundleIdPrefix: com.pipimoss.snshaitown
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+
+targets:
+  XMonitorApp:
+    type: application
+    platform: iOS
+    sources:
+      - path: XMonitorApp
+        excludes:
+          - "**/.DS_Store"
+    resources:
+      - path: XMonitorApp/Resources
+    settings:
+      base:
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+        INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown"
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: "シェア画像を保存するために使用します"
+        INFOPLIST_KEY_LSApplicationQueriesSchemes: "twitter,instagram,tiktok,youtube,fb,threads,line,reddit,snapchat,discord"
+        SWIFT_VERSION: "5.9"
+        GENERATE_INFOPLIST_FILE: YES
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: "1.0.0"
+        CODE_SIGN_STYLE: Automatic
+    # dependencies:
+    #   - target: XUsageMonitor
+
+  # Screen Time Extension (Family Controls認可取得後に有効化)
+  # XUsageMonitor:
+  #   type: app-extension
+  #   platform: iOS
+  #   sources:
+  #     - path: XUsageMonitor
+  #   settings:
+  #     base:
+  #       SWIFT_VERSION: "5.9"
+  #       GENERATE_INFOPLIST_FILE: YES
+  #       CODE_SIGN_STYLE: Automatic
+  #       CODE_SIGN_ENTITLEMENTS: XUsageMonitor/XUsageMonitor.entitlements
+  #       INFOPLIST_KEY_NSExtension_NSExtensionPointIdentifier: com.apple.deviceactivity.monitor
+  #   entitlements:
+  #     path: XUsageMonitor/XUsageMonitor.entitlements
+  #     properties:
+  #       com.apple.developer.family-controls: true
+  #       com.apple.security.application-groups:
+  #         - group.com.pipimoss.sns-hai-town
